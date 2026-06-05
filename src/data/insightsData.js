@@ -5,13 +5,41 @@ import marketingBanner from '../assets/marketing_banner.png';
 import whyChooseUsImg from '../assets/why_choose_us.png';
 import hostImg from '../assets/host.png';
 
-import aiLeadFilters from '../assets/insights/ai_lead_filters.png';
-import crmNlpBots from '../assets/insights/crm_nlp_bots.png';
+// AI Automation
+import aiLeadFilters from '../assets/insights/Saving Time and Money with AI Lead Filters.png';
+import crmNlpBots from '../assets/insights/Connecting AI Chatbots to Your CRM System.png';
 import mlBidOptimization from '../assets/insights/ml_bid_optimization.png';
 import predictiveClvModeling from '../assets/insights/predictive_clv_modeling.png';
 import contentDistributionPipelines from '../assets/insights/content_distribution_pipelines.png';
 import aiVisualGeneration from '../assets/insights/ai_visual_generation.png';
 import neuralNetworksMediaBuying from '../assets/insights/neural_networks_media_buying.png';
+
+// SEO & Web Dev
+import speedingUpGoogleIndexing from '../assets/insights/Speeding Up Google Search Indexing for Your Site.png';
+import makingNextjsFaster from '../assets/insights/Making Your Next.js Site Load Much Faster.png';
+import scalingLargeVideoSites from '../assets/insights/Scaling Large Video Sites for Millions of Users.png';
+import automatingProductSnippets from '../assets/insights/Automating Google Product Snippets for Search.png';
+import usingEdgeServers from '../assets/insights/Using CDN Edge Servers to Speed Up Page Load.png';
+import turningWebsitesPwa from '../assets/insights/Turning Websites into Offline-Capable Mobile Apps.png';
+import lightweightStylingPerformance from '../assets/insights/Lightweight Styling to Improve Site Performance.png';
+
+// PPC & Paid Ads
+import advertisingConnectedTv from '../assets/insights/How to Advertise on Connected Smart TV Screens.png';
+import biddingTrafficSurges from '../assets/insights/Bidding Smartly During Online Traffic Surges Please make sure that you make these photos in square..png';
+import trackingMarketingSuccess from '../assets/insights/Tracking Your Marketing Success Across Channels.png';
+import taggingConversionNoCookies from '../assets/insights/Tagging Conversion Events Without Using Cookies.png';
+import reachingProgrammaticAds from '../assets/insights/Reaching the Right Customer Groups with Programmatic Ads.png';
+import loweringAcquisitionLanding from '../assets/insights/Lowering Customer Acquisition Costs on Landing Pages.png';
+import videoAdAuctionsPrices from '../assets/insights/How Video Ad Auctions Determine Your Prices.png';
+
+// Branding & Creative
+import cleanVisualIdentity from '../assets/insights/Clean Visual Identity for Premium Brands.png';
+import simpleAnimationsEngagement from '../assets/insights/Using Simple Animations to Keep Visitors Engaged.png';
+import connectingDesignSystems from '../assets/insights/Connecting Design Systems to Developer Code Libraries.png';
+import fasterVideoWorkflows from '../assets/insights/Faster Video Production Workflows for Social Media.png';
+import selectingColorsBrandTrust from '../assets/insights/Selecting the Right Colors to Build Brand Trust.png';
+import tellingInteractiveBrandStories from '../assets/insights/Telling Interactive Brand Stories on Your Website.png';
+import designingMultilingualTypography from '../assets/insights/Designing Multi-Language Typography for Global Sites.png';
 
 export const insightsData = [
   // ==================== AI AUTOMATION (7 articles) ====================
@@ -129,7 +157,7 @@ export const insightsData = [
     desc: 'How restructuring database queries and structured schemas helped a website rank faster on Google.',
     date: 'May 20, 2026',
     readTime: '6 min read',
-    image: webDevBanner,
+    image: speedingUpGoogleIndexing,
     content: [
       'In search engine optimization, content quality is important, but site speed and structure are critical. If search engine crawlers struggle to navigate your website or interpret your page structure, your pages won\'t rank well on search results, no matter how good they are.',
       'To help a partner brand improve their rankings, we restructured their website codebase. We cleaned up heavy scripts, simplified rendering paths, and injected custom JSON schemas into page headers to help Google\'s bots understand the site content instantly.',
@@ -144,7 +172,7 @@ export const insightsData = [
     desc: 'Practical steps to optimize Next.js frameworks, achieve high Performance scores, and reduce page latency.',
     date: 'May 02, 2026',
     readTime: '7 min read',
-    image: hostImg,
+    image: makingNextjsFaster,
     content: [
       'A slow-loading web page is a conversion killer. Studies show that a single second delay in page load time can cause a 20% drop in sales. In the competitive e-commerce landscape, offering a fast, responsive user experience is essential to retain buyers.',
       'We optimized an enterprise e-commerce platform built on Next.js to achieve peak speed performance. Our engineers implemented dynamic script loading, optimized layout structures, and set up automated image compression and delivery.',
@@ -159,7 +187,7 @@ export const insightsData = [
     desc: 'How database splits and media caching help streaming sites run smoothly during major live traffic spikes.',
     date: 'Apr 18, 2026',
     readTime: '9 min read',
-    image: whyChooseUsImg,
+    image: scalingLargeVideoSites,
     content: [
       'High-traffic video streaming websites face massive database strain during live broadcasting events. When thousands of users join to watch a stream simultaneously, traditional centralized databases quickly get overloaded, causing video lag, errors, and system crashes.',
       'To resolve this, we restructured the database infrastructure by splitting it into smaller, manageable regional databases. This design pattern distributes user connection traffic across multiple servers, preventing any single database from getting overloaded.',
@@ -174,7 +202,7 @@ export const insightsData = [
     desc: 'Using automated scripts to insert product markup, helping search engines display pricing and reviews in search results.',
     date: 'Apr 05, 2026',
     readTime: '8 min read',
-    image: marketingBanner,
+    image: automatingProductSnippets,
     content: [
       'When search engines display rich details like product prices, availability, and star reviews directly on search result pages, click-through rates increase dramatically. However, manually coding these structured data schemas for thousands of products is a slow, error-prone task.',
       'We designed an automated schema script that links directly to product databases. The script automatically creates search-engine-compliant markup code for every product, updating prices and stock levels dynamically in search results.',
@@ -189,7 +217,7 @@ export const insightsData = [
     desc: 'How running code at global edge servers reduces physical distance and loads pages in milliseconds.',
     date: 'Mar 22, 2026',
     readTime: '6 min read',
-    image: hostImg,
+    image: usingEdgeServers,
     content: [
       'Traditional websites serve all user requests from a single central server. If your server is in New York and a user is in London or Tokyo, the physical distance causes noticeable lag. Serving dynamic content quickly requires a more localized approach.',
       'We resolved this latency by deploying execution scripts directly to global Content Delivery Network (CDN) edge locations. These edge servers are located close to major population hubs, acting as local data nodes.',
@@ -204,7 +232,7 @@ export const insightsData = [
     desc: 'How Progressive Web Apps allow users to install websites on their home screen and run them offline.',
     date: 'Mar 10, 2026',
     readTime: '8 min read',
-    image: socialMediaBanner,
+    image: turningWebsitesPwa,
     content: [
       'Mobile devices drive the majority of web traffic, but mobile web browsers often suffer from unstable network connections. If a customer loses cellular signal inside a building or on a train, their shopping experience stops, causing cart abandonment.',
       'We converted an e-commerce store into a Progressive Web App (PWA). A PWA acts like a standard mobile app, allowing users to add the website to their home screen, browse products offline, and receive push notifications.',
@@ -219,7 +247,7 @@ export const insightsData = [
     desc: 'How compiling website styling beforehand keeps your final production code fast and lightweight.',
     date: 'Feb 26, 2026',
     readTime: '7 min read',
-    image: brandingBanner,
+    image: lightweightStylingPerformance,
     content: [
       'Modern web design often uses Javascript libraries to generate page styles on the fly. While this makes building user interfaces easier for developers, it introduces execution lag in the user\'s browser, causing layout shifts and loading delays.',
       'We analyzed compile-time CSS frameworks that build style sheets beforehand. During the build process, the system compiles the code into raw, static CSS stylesheets, removing runtime styling scripts entirely.',
@@ -236,7 +264,7 @@ export const insightsData = [
     desc: 'How video ad bidding allows companies to display television commercials to targeted streaming audiences.',
     date: 'Apr 28, 2026',
     readTime: '5 min read',
-    image: marketingBanner,
+    image: advertisingConnectedTv,
     content: [
       'Television advertising is no longer restricted to multi-million dollar broadcast contracts. With millions of viewers shifting to connected TV (CTV) streaming devices, brands can now run visual commercials on smart TVs dynamically and cost-effectively.',
       'We integrated programmatic media bidding tools with major video streaming networks. This allows businesses to participate in automated ad auctions and place video spots directly inside premium streaming apps.',
@@ -251,7 +279,7 @@ export const insightsData = [
     desc: 'Adjusting paid search campaigns dynamically when relevant terms experience search surges.',
     date: 'Apr 15, 2026',
     readTime: '6 min read',
-    image: whyChooseUsImg,
+    image: biddingTrafficSurges,
     content: [
       'Static keyword bidding budgets are easily overwhelmed when market conditions shift. If a keyword suddenly experiences a search surge due to news or viral trends, fixed budgets are quickly exhausted, causing you to lose valuable traffic.',
       'We created a search integration script that connects ad campaigns directly to live search trend APIs. The script continuously scans keyword volume trends, automatically raising bid limits when traffic spikes.',
@@ -266,7 +294,7 @@ export const insightsData = [
     desc: 'Moving past simple last-click tracking to measure the complete customer journey across multiple platforms.',
     date: 'Mar 31, 2026',
     readTime: '8 min read',
-    image: hostImg,
+    image: trackingMarketingSuccess,
     content: [
       'A customer rarely purchases a product the first time they see an ad. Their journey might start with a social media post, continue through search ads, and finally finish via direct navigation. Relying on simple last-click tracking fails to show which channel initiated interest.',
       'We implemented multi-touch attribution models that distribute conversion value across the entire user journey. The model assigns credit to early-stage discovery touchpoints, middle evaluation channels, and final conversions.',
@@ -281,7 +309,7 @@ export const insightsData = [
     desc: 'Implementing server-to-server tagging networks to track customer purchases while respecting privacy.',
     date: 'Mar 18, 2026',
     readTime: '9 min read',
-    image: webDevBanner,
+    image: taggingConversionNoCookies,
     content: [
       'As browsers block third-party tracking cookies, traditional web-based tracking tags are losing accuracy. If your pixel tag fails to record conversions, your ad networks cannot optimize campaigns, causing ad performance to drop.',
       'We resolved this tracking challenge by implementing server-to-server tagging connections. Instead of relying on client-side browser cookies, the server communicates conversion events directly to advertising networks securely.',
@@ -296,7 +324,7 @@ export const insightsData = [
     desc: 'Filtering ad placements based on user coordinates to maximize returns.',
     date: 'Mar 05, 2026',
     readTime: '7 min read',
-    image: socialMediaBanner,
+    image: reachingProgrammaticAds,
     content: [
       'Showing ads to a broad, unsegmented audience is one of the quickest ways to exhaust your budget. To drive profitability, you must focus ad spend on specific groups of buyers who are highly likely to purchase your product.',
       'We optimize programmatic ad campaigns by building detailed audience segments. The system filters targets based on behavior, industry, and previous engagement, creating highly relevant consumer groups.',
@@ -311,7 +339,7 @@ export const insightsData = [
     desc: 'How optimizing landing page speeds and layouts helps lower paid search ad costs.',
     date: 'Feb 18, 2026',
     readTime: '6 min read',
-    image: whyChooseUsImg,
+    image: loweringAcquisitionLanding,
     content: [
       'B2B software keywords are highly competitive, leading to high CPC rates. If your landing pages do not convert visitors, your overall customer acquisition costs will remain unsustainably high, draining marketing budgets.',
       'We optimized landing page conversion rates by improving design layouts and loading speeds. We removed heavy elements, streamlined form fields, and designed clean, clear call-to-action sections.',
@@ -326,7 +354,7 @@ export const insightsData = [
     desc: 'Understanding viewability scores and watch rates to get the best prices on video ad slots.',
     date: 'Feb 02, 2026',
     readTime: '8 min read',
-    image: marketingBanner,
+    image: videoAdAuctionsPrices,
     content: [
       'Bidding for video ad inventory on YouTube or streaming platforms operates under different models compared to standard search ads. Advertisers need to understand how viewability, skip rates, and audience engagement affect bid prices.',
       'We analyzed campaign bidding metrics to see how video metrics impact costs. We discovered that video ads with higher watch times and lower skip rates receive premium quality scores, lowering the cost to display them.',
@@ -343,7 +371,7 @@ export const insightsData = [
     desc: 'How elegant color palettes and clean styling build trust and communicate premium brand authority.',
     date: 'May 16, 2026',
     readTime: '7 min read',
-    image: brandingBanner,
+    image: cleanVisualIdentity,
     content: [
       'A premium brand is built on consistency, visual control, and clean typography. If a website looks cluttered or inconsistent, visitors will quickly doubt the quality of the company\'s products or services.',
       'We craft minimalist branding systems tailored for premium brands. We choose simple typography, curated color palettes, and elegant layouts that convey trust and professional authority.',
@@ -358,7 +386,7 @@ export const insightsData = [
     desc: 'Adding subtle visual transitions and scroll-triggered animations to improve user session times.',
     date: 'May 01, 2026',
     readTime: '5 min read',
-    image: socialMediaBanner,
+    image: simpleAnimationsEngagement,
     content: [
       'Static websites can feel boring and unresponsive. In contrast, adding simple animations to layout components makes the browsing experience feel interactive, encouraging users to browse longer.',
       'We design micro-animations that respond when a user hovers over buttons or scrolls down a page. These animations are lightweight, ensuring they do not slow down page load times.',
@@ -373,7 +401,7 @@ export const insightsData = [
     desc: 'Linking designer mockups to developer code libraries to keep digital platforms consistent.',
     date: 'Apr 12, 2026',
     readTime: '8 min read',
-    image: webDevBanner,
+    image: connectingDesignSystems,
     content: [
       'Differences between designer layout mockups and actual developer code lead to inconsistent styling and slow down development teams. Changing a color or layout element in Figma should update the live code automatically.',
       'We set up dynamic pipeline connections that sync style tokens directly from design libraries to developer code repositories. When a designer updates a color palette or spacing value in Figma, the changes are exported to code configuration files.',
@@ -388,7 +416,7 @@ export const insightsData = [
     desc: 'How automated video rendering tools help media teams launch campaigns quickly.',
     date: 'Mar 25, 2026',
     readTime: '6 min read',
-    image: brandingBanner,
+    image: fasterVideoWorkflows,
     content: [
       'Social media campaigns require a constant flow of fresh video content to stay relevant. However, manually rendering videos for different platforms, applying captions, and adjusting aspect ratios is incredibly slow.',
       'We built an automated rendering pipeline that handles these repetitive video production tasks. Media teams simply upload the master video file, and the automation handles formatting, cropping, and subtitle rendering.',
@@ -403,7 +431,7 @@ export const insightsData = [
     desc: 'How color choices influence website visitor behaviors and purchasing choices.',
     date: 'Mar 11, 2026',
     readTime: '8 min read',
-    image: whyChooseUsImg,
+    image: selectingColorsBrandTrust,
     content: [
       'Color palettes play a major role in brand perception. Different colors trigger specific emotional responses and subconscious choices from website visitors, directly impacting their purchase decisions.',
       'We analyze behavioral statistics across digital platforms to understand how color choices affect conversion rates. We discovered that selecting harmonized, premium colors significantly raises brand trust.',
@@ -418,7 +446,7 @@ export const insightsData = [
     desc: 'Engaging web visitors through interactive storytelling layouts that react to scroll controls.',
     date: 'Feb 24, 2026',
     readTime: '7 min read',
-    image: hostImg,
+    image: tellingInteractiveBrandStories,
     content: [
       'Plain text blocks often fail to capture the interest of modern web visitors. To tell an engaging brand story, you must involve the visitor, letting them discover your history dynamically.',
       'We design immersive, interactive layouts that reveal text and visual elements as the user scrolls. This scroll-driven structure lets the visitor progress through the story at their own pace, creating a memorable brand experience.',
@@ -433,7 +461,7 @@ export const insightsData = [
     desc: 'How to maintain font styles and layout grids across multi-language enterprise web portals.',
     date: 'Feb 08, 2026',
     readTime: '9 min read',
-    image: brandingBanner,
+    image: designingMultilingualTypography,
     content: [
       'Operating in global markets requires localizing web content into multiple languages. However, different scripts have distinct character heights and spacings, which can distort your site\'s layout grids if they are not configured properly.',
       'We design typography rules that establish formatting rules for different languages, ensuring clean styling globally. We define fallback font styles and spacing values for Latin, Devanagari, Japanese, and Cyrillic scripts.',
