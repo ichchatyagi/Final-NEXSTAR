@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import { CheckCircle2, ArrowRight, UploadCloud, User, FileText, Send } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 export default function ApplyNow() {
   const [step, setStep] = useState(1);
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
@@ -32,9 +34,46 @@ export default function ApplyNow() {
     if (step > 1) setStep(step - 1);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
+    setIsSubmitting(true);
+
+    try {
+      // NOTE: Replace these with your actual EmailJS credentials
+      const serviceId = 'YOUR_SERVICE_ID';
+      const templateId = 'YOUR_TEMPLATE_ID';
+      const publicKey = 'YOUR_PUBLIC_KEY';
+
+      const templateParams = {
+        from_email: 'support@nexstarlive.in',
+        to_email: 'Contact@nexstarmedia.in',
+        fullName: formData.fullName,
+        email: formData.email,
+        phone: formData.phone,
+        role: formData.role,
+        portfolioUrl: formData.portfolioUrl,
+        resumeLink: formData.resumeLink,
+        message: formData.message,
+      };
+
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      setSubmitted(true);
+      setFormData({
+        fullName: '',
+        email: '',
+        phone: '',
+        role: '',
+        portfolioUrl: '',
+        resumeLink: '',
+        message: ''
+      });
+      setStep(1);
+    } catch (error) {
+      console.error('Failed to send email:', error);
+      alert('Failed to submit application. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -233,12 +272,13 @@ export default function ApplyNow() {
                 
                 <button 
                   type="submit"
-                  className="flex-1 flex items-center justify-center gap-2 rounded-xl bg-navy-deep hover:bg-accent-red hover:scale-102 py-4 font-heading text-xs font-bold text-white shadow-md transition-all duration-300 cursor-pointer"
+                  disabled={step === 3 && isSubmitting}
+                  className="flex-1 flex items-center justify-center gap-2 rounded-xl bg-navy-deep hover:bg-accent-red hover:scale-102 py-4 font-heading text-xs font-bold text-white shadow-md transition-all duration-300 cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:scale-100"
                 >
                   {step === 3 ? (
                     <>
-                      Submit Coordination Form
-                      <Send className="w-4 h-4 text-white" />
+                      {isSubmitting ? 'Submitting...' : 'Submit Coordination Form'}
+                      {!isSubmitting && <Send className="w-4 h-4 text-white" />}
                     </>
                   ) : (
                     <>

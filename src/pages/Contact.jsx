@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { Mail, Phone, MapPin, CheckCircle2, ArrowRight } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     company: '',
@@ -22,9 +24,35 @@ export default function Contact() {
     { label: 'Premium Content Production', value: 'content' }
   ];
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
+    setIsSubmitting(true);
+
+    try {
+      // NOTE: Replace these with your actual EmailJS credentials
+      const serviceId = 'YOUR_SERVICE_ID';
+      const templateId = 'YOUR_TEMPLATE_ID';
+      const publicKey = 'YOUR_PUBLIC_KEY';
+
+      const templateParams = {
+        from_email: 'support@nexstarlive.in',
+        to_email: 'Contact@nexstarmedia.in',
+        name: formData.name,
+        company: formData.company,
+        email: formData.email,
+        service: formData.service,
+        message: formData.message,
+      };
+
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      setSubmitted(true);
+      setFormData({ name: '', company: '', email: '', service: '', message: '' });
+    } catch (error) {
+      console.error('Failed to send email:', error);
+      alert('Failed to send message. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -256,10 +284,11 @@ export default function Contact() {
               {/* Submit button */}
               <button
                 type="submit"
-                className="w-full flex items-center justify-center gap-2 rounded-xl bg-navy-deep hover:bg-accent-red hover:scale-102 py-4 font-heading text-xs font-bold text-white shadow-md transition-all duration-300 cursor-pointer"
+                disabled={isSubmitting}
+                className="w-full flex items-center justify-center gap-2 rounded-xl bg-navy-deep hover:bg-accent-red hover:scale-102 py-4 font-heading text-xs font-bold text-white shadow-md transition-all duration-300 cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:scale-100"
               >
-                Submit Project Specifications
-                <ArrowRight className="w-4 h-4 text-white" />
+                {isSubmitting ? 'Submitting...' : 'Submit Project Specifications'}
+                {!isSubmitting && <ArrowRight className="w-4 h-4 text-white" />}
               </button>
 
             </form>
