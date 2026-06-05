@@ -172,7 +172,7 @@ export default function ServiceDetail({ currentPage, setCurrentPage }) {
     <div key={serviceId} className="bg-soft-bg min-h-screen relative font-body text-text-primary pb-24 overflow-x-hidden">
 
       {/* 1. Sticky Sub-Header Navigation */}
-      <div className="sticky top-20 z-40 bg-white/85 backdrop-blur-md border-b border-gray-200/80 py-3.5 px-6 shadow-sm">
+      <div className="sticky top-0 z-40 bg-white/85 backdrop-blur-md border-b border-gray-200/80 py-3.5 px-6 shadow-sm">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <button
             onClick={() => handleNavClick('services')}
@@ -201,8 +201,6 @@ export default function ServiceDetail({ currentPage, setCurrentPage }) {
               alt={`${selectedService.title} Background`}
               className="w-full h-full object-cover object-center"
             />
-            {/* Soft backdrop blur and light gradient overlay for readability of dark text */}
-            <div className="absolute inset-0 bg-white/85 backdrop-blur-[1px] lg:bg-gradient-to-r lg:from-white/95 lg:via-white/90 lg:to-white/40" />
           </div>
         </div>
 
@@ -385,14 +383,14 @@ export default function ServiceDetail({ currentPage, setCurrentPage }) {
           {/* Interactive Stepper Layout */}
           <div className="grid lg:grid-cols-12 gap-12 items-center">
 
-            {/* Step triggers (Left side / Horizontal on mobile) */}
-            <div className="lg:col-span-5 flex flex-row lg:flex-col gap-2 sm:gap-4 overflow-x-auto lg:overflow-x-visible pb-4 lg:pb-0 justify-between lg:justify-start">
+            {/* Step triggers (Left side) */}
+            <div className="lg:col-span-5 flex flex-col gap-4">
               {selectedService.process.map((p, idx) => (
-                <ScrollReveal key={idx} direction="left" delay={0.1 + idx * 0.08} className="flex-1 lg:flex-none">
+                <ScrollReveal key={idx} direction="left" delay={0.1 + idx * 0.08}>
                   <button
                     onClick={() => setActiveStep(idx)}
-                    className={`w-full text-left p-3 sm:p-5 rounded-2xl border transition-all duration-300 flex items-center justify-center lg:justify-start gap-3 sm:gap-4 cursor-pointer ${activeStep === idx
-                      ? 'bg-navy-deep border-navy-deep text-white shadow-lg lg:translate-x-2'
+                    className={`w-full text-left p-5 rounded-2xl border transition-all duration-300 flex items-center gap-4 cursor-pointer ${activeStep === idx
+                      ? 'bg-navy-deep border-navy-deep text-white shadow-lg translate-x-2'
                       : 'bg-white border-gray-200 hover:border-navy-deep/20 text-navy-deep hover:bg-gray-50'
                       }`}
                   >
@@ -400,9 +398,11 @@ export default function ServiceDetail({ currentPage, setCurrentPage }) {
                       }`}>
                       {p.step}
                     </span>
-                    <span className="font-heading text-xs sm:text-sm font-extrabold tracking-tight hidden md:inline lg:inline">
-                      {p.title}
-                    </span>
+                    <div>
+                      <h3 className="font-heading text-sm font-extrabold tracking-tight">
+                        {p.title}
+                      </h3>
+                    </div>
                   </button>
                 </ScrollReveal>
               ))}
