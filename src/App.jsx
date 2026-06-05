@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Layout from './components/Layout';
 
 // Core Pages imports
@@ -19,6 +19,10 @@ import ApplyNow from './pages/ApplyNow';
 export default function App() {
   // Client-side router tracking current view. Can be string or object (e.g. { name: 'service-detail', id: 'web-dev' })
   const [currentPage, setCurrentPage] = useState('home');
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [currentPage]);
 
   const renderActiveView = () => {
     const pageName = typeof currentPage === 'string' ? currentPage : currentPage?.name;
