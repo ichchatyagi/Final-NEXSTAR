@@ -195,7 +195,7 @@ export default function Navbar({ currentPage, setCurrentPage }) {
 
       {/* Mobile Drawer Overlay */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-t border-gray-200/80 bg-white/98 px-6 py-6 shadow-lg animate-in slide-in-from-top duration-300">
+        <div className="lg:hidden border-t border-gray-200/80 bg-white/98 px-6 py-6 shadow-lg animate-in slide-in-from-top duration-300 max-h-[calc(100vh-5rem)] overflow-y-auto">
           <nav className="flex flex-col gap-5">
             {navLinks.map((item, idx) => (
               <div key={idx} className="flex flex-col gap-2">
@@ -221,7 +221,7 @@ export default function Navbar({ currentPage, setCurrentPage }) {
                 </button>
 
                 {item.dropdown && mobileActiveDropdown === idx && (
-                  <div className="grid grid-cols-2 gap-2 pl-4 py-2 border-l border-slate-100 animate-in fade-in slide-in-from-top-2 duration-200">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pl-4 py-2 border-l border-slate-100 animate-in fade-in slide-in-from-top-2 duration-200">
                     {item.dropdown.map((sub, sIdx) => (
                       <button
                         key={sIdx}

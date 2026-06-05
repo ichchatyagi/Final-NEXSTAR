@@ -80,9 +80,9 @@ export default function Footer({ setCurrentPage }) {
             <ul className="flex flex-col gap-2.5 text-xs font-semibold text-text-secondary">
               <li><button onClick={() => handleNavClick({ name: 'service-detail', id: 'web-development' })} className="hover:text-navy-deep transition-colors cursor-pointer">Web Application Development</button></li>
               <li><button onClick={() => handleNavClick({ name: 'service-detail', id: 'mobile-app' })} className="hover:text-navy-deep transition-colors cursor-pointer">Mobile App Engineering</button></li>
-              <li><button onClick={() => handleNavClick({ name: 'service-detail', id: 'seo' })} className="hover:text-navy-deep transition-colors cursor-pointer">Search Engine Optimization</button></li>
-              <li><button onClick={() => handleNavClick({ name: 'service-detail', id: 'ai' })} className="hover:text-navy-deep transition-colors cursor-pointer">AI Automation Integration</button></li>
-              <li><button onClick={() => handleNavClick('services')} className="text-highlight-blue hover:underline cursor-pointer">Browse All 8 Services</button></li>
+              <li><button onClick={() => handleNavClick({ name: 'service-detail', id: 'search-marketing' })} className="hover:text-navy-deep transition-colors cursor-pointer">Search Engine Optimization</button></li>
+              <li><button onClick={() => handleNavClick({ name: 'service-detail', id: 'cybersecurity-ai' })} className="hover:text-navy-deep transition-colors cursor-pointer">AI Automation Integration</button></li>
+              <li><button onClick={() => handleNavClick('services')} className="text-highlight-blue hover:underline cursor-pointer">Browse All 20 Services</button></li>
             </ul>
           </div>
 
