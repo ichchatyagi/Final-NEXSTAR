@@ -40,12 +40,12 @@ export default function ApplyNow() {
 
     try {
       // NOTE: Replace these with your actual EmailJS credentials
-      const serviceId = 'YOUR_SERVICE_ID';
-      const templateId = 'YOUR_TEMPLATE_ID';
-      const publicKey = 'YOUR_PUBLIC_KEY';
+      const serviceId = 'service_h63l6ik';
+      const templateId = 'template_l5wtzeb';
+      const publicKey = 'tukteHI0GgQbqTLen';
 
       const templateParams = {
-        from_email: 'support@nexstarlive.in',
+        from_email: 'nexstarinternal@gmail.com',
         to_email: 'Contact@nexstarmedia.in',
         fullName: formData.fullName,
         email: formData.email,

@@ -30,12 +30,12 @@ export default function Contact() {
 
     try {
       // NOTE: Replace these with your actual EmailJS credentials
-      const serviceId = 'YOUR_SERVICE_ID';
-      const templateId = 'YOUR_TEMPLATE_ID';
-      const publicKey = 'YOUR_PUBLIC_KEY';
+      const serviceId = 'service_h63l6ik';
+      const templateId = 'template_6hjf6fk';
+      const publicKey = 'tukteHI0GgQbqTLen';
 
       const templateParams = {
-        from_email: 'support@nexstarlive.in',
+        from_email: 'support@nexstarinternal@gmail.com',
         to_email: 'Contact@nexstarmedia.in',
         name: formData.name,
         company: formData.company,
