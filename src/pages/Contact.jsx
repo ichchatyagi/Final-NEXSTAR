@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Mail, Phone, MapPin, CheckCircle2, ArrowRight } from 'lucide-react';
 import emailjs from '@emailjs/browser';
+import InteractiveMap from '../components/InteractiveMap';
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
@@ -85,13 +86,21 @@ export default function Contact() {
 
             {/* US Coordinate */}
             <div className="bg-white border border-gray-200/60 p-6 rounded-2xl shadow-sm flex flex-col gap-4">
-              <span className="text-xs font-extrabold uppercase tracking-widest text-highlight-blue">US Coordinate</span>
+              <span className="text-xs font-extrabold uppercase tracking-widest text-highlight-blue">Global Headquarters</span>
 
               <div className="flex gap-3.5 items-start">
                 <MapPin className="w-5 h-5 text-accent-red shrink-0 mt-0.5" />
                 <div>
-                  <h4 className="font-heading text-xs font-bold text-navy-deep uppercase tracking-wider">New York HQ</h4>
+                  <h4 className="font-heading text-xs font-bold text-navy-deep uppercase tracking-wider">United States</h4>
                   <p className="text-text-secondary text-xs font-semibold mt-1">845 3rd Ave 6th floor, New York, NY 10022, United States</p>
+                </div>
+              </div>
+
+              <div className="flex gap-3.5 items-start border-t border-gray-100 pt-4">
+                <MapPin className="w-5 h-5 text-accent-red shrink-0 mt-0.5" />
+                <div>
+                  <h4 className="font-heading text-xs font-bold text-navy-deep uppercase tracking-wider">United Kingdom</h4>
+                  <p className="text-text-secondary text-xs font-semibold mt-1">1st Floor, 239 Kensington High St, London W8 6SN, United Kingdom</p>
                 </div>
               </div>
 
@@ -114,13 +123,13 @@ export default function Contact() {
 
             {/* India Coordinate */}
             <div className="bg-white border border-gray-200/60 p-6 rounded-2xl shadow-sm flex flex-col gap-4">
-              <span className="text-xs font-extrabold uppercase tracking-widest text-highlight-blue">India Coordinate</span>
+              <span className="text-xs font-extrabold uppercase tracking-widest text-highlight-blue">Corporate Office</span>
 
               <div className="flex gap-3.5 items-start">
                 <MapPin className="w-5 h-5 text-accent-red shrink-0 mt-0.5" />
                 <div>
-                  <h4 className="font-heading text-xs font-bold text-navy-deep uppercase tracking-wider">Noida Technology Hub</h4>
-                  <p className="text-text-secondary text-xs font-semibold mt-1">Level-5, SB Tower, Film City, Sector-16A, Noida – 201301, (U.P.) India</p>
+                  <h4 className="font-heading text-xs font-bold text-navy-deep uppercase tracking-wider">Delhi NCR </h4>
+                  <p className="text-text-secondary text-xs font-semibold mt-1">Level - 16th & 17th DND Flyway, Plot No.C-001A, Sector 16B, Noida, Uttar Pradesh 201301</p>
                 </div>
               </div>
 
@@ -145,31 +154,31 @@ export default function Contact() {
             <div className="bg-white border border-gray-200/60 p-6 rounded-2xl shadow-sm flex flex-col gap-4 animate-in fade-in duration-300">
               <span className="text-xs font-extrabold uppercase tracking-widest text-highlight-blue">Social Coordinates</span>
               <div className="flex flex-wrap gap-2.5 mt-1">
-                <a 
-                  href="https://www.facebook.com/nexstarmediaindia" 
-                  target="_blank" 
+                <a
+                  href="https://www.facebook.com/nexstarmediaindia"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 rounded-xl bg-gray-light hover:bg-navy-deep hover:text-white px-3.5 py-2 font-heading text-xs font-bold text-navy-deep transition-all duration-200 shadow-sm cursor-pointer"
                 >
                   <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                    <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.8c4.56-.93 8-4.96 8-9.8z"/>
+                    <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.8c4.56-.93 8-4.96 8-9.8z" />
                   </svg>
                   Facebook
                 </a>
-                <a 
-                  href="https://www.linkedin.com/company/nexstarmediaindia/" 
-                  target="_blank" 
+                <a
+                  href="https://www.linkedin.com/company/nexstarmediaindia/"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 rounded-xl bg-gray-light hover:bg-navy-deep hover:text-white px-3.5 py-2 font-heading text-xs font-bold text-navy-deep transition-all duration-200 shadow-sm cursor-pointer"
                 >
                   <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                   </svg>
                   LinkedIn
                 </a>
-                <a 
-                  href="https://www.instagram.com/nexstarmedialive" 
-                  target="_blank" 
+                <a
+                  href="https://www.instagram.com/nexstarmedialive"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 rounded-xl bg-gray-light hover:bg-navy-deep hover:text-white px-3.5 py-2 font-heading text-xs font-bold text-navy-deep transition-all duration-200 shadow-sm cursor-pointer"
                 >
@@ -299,45 +308,7 @@ export default function Contact() {
 
       {/* Map Integration Section */}
       <section className="pb-24 px-6 max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-8">
-          {/* US Map Card */}
-          <div className="bg-white border border-gray-200/80 rounded-3xl p-6 shadow-sm hover:shadow-md transition-shadow">
-            <span className="text-[10px] bg-highlight-blue/10 text-highlight-blue px-2.5 py-1 rounded-md font-heading font-extrabold uppercase tracking-wider mb-3 inline-block">
-              US HQ Map
-            </span>
-            <div className="rounded-2xl overflow-hidden border border-gray-100 h-80">
-              <iframe
-                title="New York HQ Map"
-                src="https://maps.google.com/maps?q=845%203rd%20Ave%20New%20York%20NY%2010022&t=&z=14&ie=UTF8&iwloc=&output=embed"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
-          </div>
-
-          {/* India Map Card */}
-          <div className="bg-white border border-gray-200/80 rounded-3xl p-6 shadow-sm hover:shadow-md transition-shadow">
-            <span className="text-[10px] bg-highlight-blue/10 text-highlight-blue px-2.5 py-1 rounded-md font-heading font-extrabold uppercase tracking-wider mb-3 inline-block">
-              India Hub Map
-            </span>
-            <div className="rounded-2xl overflow-hidden border border-gray-100 h-80">
-              <iframe
-                title="Noida Hub Map"
-                src="https://maps.google.com/maps?q=SB%20Tower%20Film%20City%20Sector%2016A%20Noida&t=&z=14&ie=UTF8&iwloc=&output=embed"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
-          </div>
-        </div>
+        <InteractiveMap />
       </section>
 
     </div>

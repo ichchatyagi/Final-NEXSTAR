@@ -9,17 +9,17 @@ export default function Footer({ setCurrentPage }) {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-light border-t border-gray-200/50 py-16 relative z-10 font-body">
+    <footer className="bg-navy-deep py-16 relative z-10 font-body text-white">
       <div className="mx-auto max-w-7xl px-6">
 
         {/* Top Grid section */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 lg:gap-6 pb-12 border-b border-slate-200">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 lg:gap-6 pb-12 border-b border-white/10">
 
           {/* Logo and Brand tagline */}
           <div className="col-span-1 sm:col-span-2 flex flex-col gap-2">
             <div
               onClick={() => handleNavClick('home')}
-              className="flex items-center cursor-pointer group w-fit -mt-5"
+              className="flex items-center cursor-pointer group w-fit -mt-7 mb-2"
             >
               <img
                 src={nexLogo}
@@ -27,7 +27,7 @@ export default function Footer({ setCurrentPage }) {
                 className="h-28 w-auto transition-all duration-300 group-hover:scale-105"
               />
             </div>
-            <p className="text-text-secondary text-sm max-w-sm leading-relaxed -mt-4">
+            <p className="text-white/70 text-sm max-w-sm leading-relaxed -mt-4">
               Nexstar Media &amp; Technologies is a premium global corporate agency engineering bespoke digital infrastructure, AI automations, and performance-led brand designs.
             </p>
 
@@ -65,42 +65,42 @@ export default function Footer({ setCurrentPage }) {
 
           {/* Column 2: Informational Links */}
           <div className="flex flex-col gap-4">
-            <h3 className="font-heading text-sm font-bold text-navy-deep uppercase tracking-wider">Company</h3>
-            <ul className="flex flex-col gap-2.5 text-xs font-semibold text-text-secondary">
-              <li><button onClick={() => handleNavClick('about')} className="hover:text-navy-deep transition-colors cursor-pointer">About Us</button></li>
-              <li><button onClick={() => handleNavClick('our-story')} className="hover:text-navy-deep transition-colors cursor-pointer">Our Story</button></li>
-              <li><button onClick={() => handleNavClick('team')} className="hover:text-navy-deep transition-colors cursor-pointer">Meet the Team</button></li>
-              <li><button onClick={() => handleNavClick('portfolio')} className="hover:text-navy-deep transition-colors cursor-pointer">Case Studies</button></li>
+            <h3 className="font-heading text-sm font-bold text-white uppercase tracking-wider">Company</h3>
+            <ul className="flex flex-col gap-2.5 text-xs font-semibold text-white/60">
+              <li><button onClick={() => handleNavClick('about')} className="hover:text-white transition-colors cursor-pointer">About Us</button></li>
+              <li><button onClick={() => handleNavClick('our-story')} className="hover:text-white transition-colors cursor-pointer">Our Story</button></li>
+              <li><button onClick={() => handleNavClick('team')} className="hover:text-white transition-colors cursor-pointer">Meet the Team</button></li>
+              <li><button onClick={() => handleNavClick('portfolio')} className="hover:text-white transition-colors cursor-pointer">Case Studies</button></li>
             </ul>
           </div>
 
           {/* Column 3: Corporate Services */}
           <div className="flex flex-col gap-4">
-            <h3 className="font-heading text-sm font-bold text-navy-deep uppercase tracking-wider">Services</h3>
-            <ul className="flex flex-col gap-2.5 text-xs font-semibold text-text-secondary">
-              <li><button onClick={() => handleNavClick({ name: 'service-detail', id: 'web-development' })} className="hover:text-navy-deep transition-colors cursor-pointer">Web Application Development</button></li>
-              <li><button onClick={() => handleNavClick({ name: 'service-detail', id: 'mobile-app' })} className="hover:text-navy-deep transition-colors cursor-pointer">Mobile App Engineering</button></li>
-              <li><button onClick={() => handleNavClick({ name: 'service-detail', id: 'seo' })} className="hover:text-navy-deep transition-colors cursor-pointer">Search Engine Optimization</button></li>
-              <li><button onClick={() => handleNavClick({ name: 'service-detail', id: 'ai' })} className="hover:text-navy-deep transition-colors cursor-pointer">AI Automation Integration</button></li>
+            <h3 className="font-heading text-sm font-bold text-white uppercase tracking-wider">Services</h3>
+            <ul className="flex flex-col gap-2.5 text-xs font-semibold text-white/60">
+              <li><button onClick={() => handleNavClick({ name: 'service-detail', id: 'web-development' })} className="hover:text-white transition-colors cursor-pointer">Web Application Development</button></li>
+              <li><button onClick={() => handleNavClick({ name: 'service-detail', id: 'mobile-app' })} className="hover:text-white transition-colors cursor-pointer">Mobile App Engineering</button></li>
+              <li><button onClick={() => handleNavClick({ name: 'service-detail', id: 'seo' })} className="hover:text-white transition-colors cursor-pointer">Search Engine Optimization</button></li>
+              <li><button onClick={() => handleNavClick({ name: 'service-detail', id: 'ai' })} className="hover:text-white transition-colors cursor-pointer">AI Automation Integration</button></li>
               <li><button onClick={() => handleNavClick('services')} className="text-highlight-blue hover:underline cursor-pointer">Browse All 8 Services</button></li>
             </ul>
           </div>
 
           {/* Column 4: Pricing and Inquiries */}
           <div className="flex flex-col gap-4">
-            <h3 className="font-heading text-sm font-bold text-navy-deep uppercase tracking-wider">Solutions</h3>
-            <ul className="flex flex-col gap-2.5 text-xs font-semibold text-text-secondary">
-              <li><button onClick={() => handleNavClick('seo-pricing')} className="hover:text-navy-deep transition-colors cursor-pointer">SEO/GEO Campaign Tiers</button></li>
-              <li><button onClick={() => handleNavClick('smo-pricing')} className="hover:text-navy-deep transition-colors cursor-pointer">SMO Package Matrix</button></li>
-              <li><button onClick={() => handleNavClick('ppc-pricing')} className="hover:text-navy-deep transition-colors cursor-pointer">PPC/Paid Campaign Fees</button></li>
+            <h3 className="font-heading text-sm font-bold text-white uppercase tracking-wider">Solutions</h3>
+            <ul className="flex flex-col gap-2.5 text-xs font-semibold text-white/60">
+              <li><button onClick={() => handleNavClick('seo-pricing')} className="hover:text-white transition-colors cursor-pointer">SEO/GEO Campaign Tiers</button></li>
+              <li><button onClick={() => handleNavClick('smo-pricing')} className="hover:text-white transition-colors cursor-pointer">SMO Package Matrix</button></li>
+              <li><button onClick={() => handleNavClick('ppc-pricing')} className="hover:text-white transition-colors cursor-pointer">PPC/Paid Campaign Fees</button></li>
             </ul>
           </div>
 
         </div>
 
         {/* Bottom Banner */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-8 text-xs font-semibold text-slate-500">
-          <p>©️ 2019 Nexstar Media. All rights reserved.</p>
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-8 text-xs font-semibold text-white/40">
+          <p className="text-white">©️ 2019 Nexstar Media. All rights reserved.</p>
           <p>The Flagship Company of Nexstar Live Technologies LLC, United States.</p>
         </div>
 

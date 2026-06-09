@@ -311,7 +311,7 @@ export default function Home({ setCurrentPage }) {
             </h1>
 
             <p className="text-slate-200 text-base sm:text-lg font-light leading-relaxed max-w-2xl drop-shadow-sm">
-              NEXSTAR Media & Technologies is a  company helping businesses grow through digital innovation, strategic marketing, creative branding, web development, and immersive content experiences.
+              NEXSTAR is a  company helping businesses grow through digital innovation, strategic marketing, creative branding, web development, and immersive content experiences.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center gap-4 mt-2">
