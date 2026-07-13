@@ -67,10 +67,11 @@ export default function Footer({ setCurrentPage }) {
           <div className="flex flex-col gap-4">
             <h3 className="font-heading text-sm font-bold text-white uppercase tracking-wider">Company</h3>
             <ul className="flex flex-col gap-2.5 text-xs font-semibold text-white/60">
-              <li><button onClick={() => handleNavClick('about')} className="hover:text-white transition-colors cursor-pointer">About Us</button></li>
-              <li><button onClick={() => handleNavClick('our-story')} className="hover:text-white transition-colors cursor-pointer">Our Story</button></li>
+              <li><button onClick={() => handleNavClick('our-story')} className="hover:text-white transition-colors cursor-pointer">About Us</button></li>
               <li><button onClick={() => handleNavClick('team')} className="hover:text-white transition-colors cursor-pointer">Meet the Team</button></li>
               <li><button onClick={() => handleNavClick('portfolio')} className="hover:text-white transition-colors cursor-pointer">Case Studies</button></li>
+              <li><button onClick={() => handleNavClick('contact')} className="hover:text-white transition-colors cursor-pointer">Contact</button></li>
+              <li><button onClick={() => handleNavClick('blog')} className="hover:text-white transition-colors cursor-pointer">Insights</button></li>
             </ul>
           </div>
 
