@@ -72,6 +72,7 @@ export default function Footer({ setCurrentPage }) {
               <li><button onClick={() => handleNavClick('portfolio')} className="hover:text-white transition-colors cursor-pointer">Case Studies</button></li>
               <li><button onClick={() => handleNavClick('contact')} className="hover:text-white transition-colors cursor-pointer">Contact</button></li>
               <li><button onClick={() => handleNavClick('blog')} className="hover:text-white transition-colors cursor-pointer">Insights</button></li>
+              <li><a href="https://www.nexstar.technology/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors cursor-pointer">Nexstar Workspace</a></li>
             </ul>
           </div>
 
