@@ -34,7 +34,7 @@ export default function Footer({ setCurrentPage }) {
               />
             </div>
             <p className="text-white/70 text-sm max-w-sm leading-relaxed -mt-4">
-              Nexstar Media &amp; Technologies is a premium global corporate agency engineering bespoke digital infrastructure, AI automations, and performance-led brand designs.
+              Nexstar is a premium global corporate agency engineering bespoke digital infrastructure, AI automations, and performance-led brand designs.
             </p>
 
             {/* Social Links */}

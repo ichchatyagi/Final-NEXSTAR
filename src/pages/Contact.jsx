@@ -141,7 +141,7 @@ export default function Contact() {
               <div className="flex gap-3.5 items-start">
                 <MapPin className="w-5 h-5 text-accent-red shrink-0 mt-0.5" />
                 <div>
-                  <h4 className="font-heading text-xs font-bold text-navy-deep uppercase tracking-wider">NewDelhi </h4>
+                  <h4 className="font-heading text-xs font-bold text-navy-deep uppercase tracking-wider">New Delhi </h4>
                   <p className="text-text-secondary text-xs font-semibold mt-1">Level - 16th & 17th DND Flyway, Plot No.C-001A, Sector 16B, Noida, Uttar Pradesh 201301</p>
                 </div>
               </div>
