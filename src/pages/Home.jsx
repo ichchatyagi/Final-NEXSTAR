@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import {
-  Sparkles,
+  Layers,
   TrendingUp,
   Globe2,
   ArrowRight,
@@ -11,21 +11,33 @@ import {
   Workflow,
   Lightbulb,
   Star,
-  Quote
+  Quote,
+  Bot,
+  Cpu,
+  Calculator,
+  Headphones,
+  Sparkles,
+  BarChart3,
+  ShieldCheck
 } from 'lucide-react';
 import ScrollReveal from '../components/ScrollReveal';
 import heroBanner0 from '../assets/herobanner.png';
 import heroBanner1 from '../assets/herobanner1.png';
 import heroBanner2 from '../assets/herobanner2.png';
 import hostImg from '../assets/host.png';
-import marketingBanner from '../assets/marketing_banner.png';
-import whyChooseUsBanner from '../assets/why_choose_us.png';
-import webDevBanner from '../assets/web_dev_banner.png';
-import brandingBanner from '../assets/branding_banner.png';
-import socialMediaBanner from '../assets/social_media_banner.png';
 import websiteDevHomeService from '../assets/home services/Website development.png';
 import zohoSuiteHomeService from '../assets/home services/Zoho Suite.png';
 import socialMediaHomeService from '../assets/home services/social media advertising.png';
+
+// Service 3D Assets for Home Showcase
+import erpDevImg from '../assets/services/ERP Development.png';
+import saasDevImg from '../assets/services/SaaS Application Development.png';
+import aiAgentsImg from '../assets/services/AI Agents & Intelligent Assistants.png';
+import workflowImg from '../assets/services/Workflow Automation.png';
+import leadGenImg from '../assets/services/Lead Generation & Growth Marketing.png';
+import biAnalyticsImg from '../assets/services/Business Intelligence & Analytics.png';
+import payrollImg from '../assets/services/Payroll Administration.png';
+import adminAssistantImg from '../assets/services/Administrative Assistance.png';
 
 // New Minimal Value Illustrations
 import philosophyIllustration from '../assets/values/philosophy.png';
@@ -207,36 +219,50 @@ export default function Home({ setCurrentPage }) {
 
 
 
-  const featuredServices = [
+  const trendingServices = [
     {
-      id: 'social-media-ads',
-      title: 'Social Media Advertising',
-      desc: 'High-conversion campaigns on Meta, LinkedIn, and TikTok using paid pixel analytics.',
-      icon: TrendingUp,
-      color: 'text-pink-600 bg-pink-50/5 border-pink-100',
-      borderClass: 'border-pink-500/60 hover:border-pink-600',
-      bullets: ['Pixel conversions setups', 'Paid audience filtering'],
-      bgImage: socialMediaHomeService
+      id: 'ai-business-automation',
+      tag: '🔥 Top Trending',
+      tagColor: 'bg-purple-50 text-purple-700 border-purple-200',
+      title: 'AI & Business Automation',
+      desc: 'Autonomous multi-agent task swarms, 24/7 AI customer support, and zero-touch CRM pipeline synchronization.',
+      image: aiAgentsImg,
+      metric: '80% Tasks Cut',
+      borderHover: 'hover:border-purple-400',
+      accentGlow: 'hover:shadow-purple-500/10'
     },
     {
-      id: 'web-development',
-      title: 'Website Development',
-      desc: 'High-performance React frontend architectures compiled cleanly for edge CDN speed.',
-      icon: Code2,
-      color: 'text-indigo-600 bg-indigo-50/5 border-indigo-100',
-      borderClass: 'border-indigo-500/60 hover:border-indigo-600',
-      bullets: ['React 19 & Vite 8', 'Edge CDN caching nodes'],
-      bgImage: websiteDevHomeService
+      id: 'website-software-development',
+      tag: '⚡ High Demand',
+      tagColor: 'bg-indigo-50 text-indigo-700 border-indigo-200',
+      title: 'Website & SaaS Engineering',
+      desc: 'Scalable cloud architectures, modern Next.js/React platforms, multi-tenant SaaS products, and custom ERP systems.',
+      image: saasDevImg,
+      metric: '99.9% Uptime',
+      borderHover: 'hover:border-indigo-400',
+      accentGlow: 'hover:shadow-indigo-500/10'
     },
     {
-      id: 'zoho-services',
-      title: 'Zoho Suite Services',
-      desc: 'Establish and automate CRM pipelines and operational workflows inside Zoho.',
-      icon: Workflow,
-      color: 'text-indigo-600 bg-indigo-50/10 border-indigo-200/50',
-      borderClass: 'border-indigo-600/60 hover:border-indigo-700',
-      bullets: ['Zoho CRM synchronization', 'Custom workflow triggers'],
-      bgImage: zohoSuiteHomeService
+      id: 'digital-marketing',
+      tag: '🚀 Scalable ROI',
+      tagColor: 'bg-blue-50 text-blue-700 border-blue-200',
+      title: 'Performance Growth & Marketing',
+      desc: 'High-intent B2B customer acquisition funnels, algorithmic search optimization, and programmatic media buying.',
+      image: leadGenImg,
+      metric: '+168% Conversion',
+      borderHover: 'hover:border-blue-400',
+      accentGlow: 'hover:shadow-blue-500/10'
+    },
+    {
+      id: 'advanced-tech-engineering',
+      tag: '📊 Real-Time',
+      tagColor: 'bg-emerald-50 text-emerald-700 border-emerald-200',
+      title: 'Business Intelligence & Telemetry',
+      desc: 'Real-time executive reporting, predictive customer analytics, and multi-source data warehouse integration.',
+      image: biAnalyticsImg,
+      metric: 'Live Insights',
+      borderHover: 'hover:border-emerald-400',
+      accentGlow: 'hover:shadow-emerald-500/10'
     }
   ];
 
@@ -246,7 +272,7 @@ export default function Home({ setCurrentPage }) {
   };
 
   const handleServiceClick = (serviceId) => {
-    setCurrentPage({ name: 'service-detail', id: serviceId });
+    setCurrentPage(serviceId ? { name: 'service-detail', id: serviceId } : 'services');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -297,7 +323,7 @@ export default function Home({ setCurrentPage }) {
           {/* Left Content Column */}
           <div className="lg:col-span-8 flex flex-col gap-6 text-left animate-in fade-in slide-in-from-left duration-700">
             <div className="inline-flex w-fit items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3.5 py-1.5 shadow-lg backdrop-blur-md">
-              <Sparkles className="h-4 w-4 text-accent-red animate-pulse" />
+              <Layers className="h-4 w-4 text-accent-red" />
               <span className="text-xs font-bold uppercase tracking-wider text-white font-heading">
                 Nexstar Media and Technologies
               </span>
@@ -610,82 +636,88 @@ export default function Home({ setCurrentPage }) {
         </div>
       </section>
 
-      {/* Services We Provide */}
+      {/* Trending Services We Provide */}
       <section className="py-20 px-6 bg-soft-bg border-b border-gray-200/50">
-        <div className="mx-auto max-w-7xl text-center">
-          <span className="text-xs font-extrabold uppercase tracking-widest text-highlight-blue">
-            Our Expertise
-          </span>
-          <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-navy-deep mt-3 mb-4">
-            Services We Provide
-          </h2>
-          <p className="text-text-secondary font-light max-w-2xl mx-auto leading-relaxed text-sm sm:text-base mb-12">
-            We provide standard-compliant software development, targeted search advertisements, full-scale Zoho CRM blueprints, cyber threat auditing, and premium brand designs tailored for modern business scaling.
-          </p>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredServices.map((service, idx) => {
-              const ctaText = service.title.endsWith('Services')
-                ? service.title.slice(0, -1)
-                : `${service.title} Service`;
-              return (
-                <ScrollReveal
-                  key={service.id}
-                  direction="up"
-                  delay={0.1 * (idx + 1)}
-                  className="flex"
-                >
-                  <div
-                    onClick={() => handleServiceClick(service.id)}
-                    className={`relative overflow-hidden bg-white border-[3px] ${service.borderClass} rounded-3xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-end text-left group cursor-pointer w-full min-h-[340px]`}
-                  >
-                    {service.bgImage && (
-                      <div
-                        className="absolute inset-0 z-0 bg-cover bg-center opacity-100 pointer-events-none transition-transform duration-500 group-hover:scale-105"
-                        style={{ backgroundImage: `url(${service.bgImage})` }}
-                      />
-                    )}
-
-                    <div className="relative z-10 w-full">
-                      {/* Arrow trigger CTA */}
-                      <div className="w-full mt-2 flex items-center justify-between rounded-xl bg-gray-light group-hover:bg-navy-deep group-hover:text-white px-4 py-3 font-heading text-xs font-bold text-navy-deep transition-all duration-200">
-                        {ctaText}
-                        <ArrowRight className="w-4 h-4" />
-                      </div>
-                    </div>
-                  </div>
-                </ScrollReveal>
-              );
-            })}
+        <div className="mx-auto max-w-7xl">
+          {/* Header */}
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <span className="text-xs font-extrabold uppercase tracking-widest text-highlight-blue">
+              Our Expertise
+            </span>
+            <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-navy-deep mt-2.5 mb-3">
+              Services We Provide
+            </h2>
+            <p className="text-text-secondary font-light text-sm sm:text-base leading-relaxed">
+              High-impact solutions designed for modern enterprise growth — from autonomous AI agent swarms to scalable cloud engineering and performance marketing.
+            </p>
           </div>
 
-          <button
-            onClick={() => handleNavClick('services')}
-            className="mt-12 inline-flex items-center gap-2 rounded-xl bg-navy-deep px-8 py-3.5 font-heading text-xs font-bold text-white hover:bg-accent-red hover:scale-105 transition-all cursor-pointer shadow-lg shadow-navy-deep/15"
-          >
-            Explore All Services
-            <ArrowRight className="w-4 h-4" />
-          </button>
+          {/* 4 Trending Service Cards Grid */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {trendingServices.map((service, idx) => (
+              <ScrollReveal
+                key={service.id}
+                direction="up"
+                delay={0.1 * (idx + 1)}
+                className="flex"
+              >
+                <div
+                  onClick={() => handleServiceClick(service.id)}
+                  className={`w-full bg-white rounded-2xl border border-slate-200/80 p-5 shadow-2xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between text-left group cursor-pointer ${service.borderHover} ${service.accentGlow}`}
+                >
+                  <div>
+                    {/* 3D Product Mockup Visual */}
+                    <div className="relative w-full aspect-16/10 rounded-xl overflow-hidden bg-slate-50 border border-slate-100/90 mb-4 p-2.5 flex items-center justify-center">
+                      <img
+                        src={service.image}
+                        alt={service.title}
+                        className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                        loading="lazy"
+                      />
+                      {/* Metric Pill Badge */}
+                      <div className="absolute top-2 right-2 bg-white/90 backdrop-blur-md border border-slate-200/80 px-2 py-0.5 rounded-md text-[10px] font-mono font-bold text-navy-deep shadow-2xs">
+                        {service.metric}
+                      </div>
+                    </div>
+
+                    {/* Trending Tag */}
+                    <span className={`inline-block px-2.5 py-0.5 rounded-md text-[10px] font-heading font-bold border mb-2.5 ${service.tagColor}`}>
+                      {service.tag}
+                    </span>
+
+                    {/* Title & Description */}
+                    <h3 className="font-heading text-base sm:text-lg font-extrabold text-navy-deep group-hover:text-highlight-blue transition-colors mb-2">
+                      {service.title}
+                    </h3>
+                    <p className="text-text-secondary text-xs leading-relaxed line-clamp-3">
+                      {service.desc}
+                    </p>
+                  </div>
+
+                  {/* Card Bottom CTA Link */}
+                  <div className="mt-5 pt-3.5 border-t border-slate-100 flex items-center justify-between text-xs font-heading font-bold text-navy-deep group-hover:text-highlight-blue transition-colors">
+                    <span>Learn More</span>
+                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+
+          {/* Explore More Button */}
+          <div className="mt-12 text-center">
+            <button
+              onClick={() => handleNavClick("services")}
+              className="inline-flex items-center gap-2 rounded-xl bg-navy-deep px-8 py-3.5 font-heading text-xs font-bold text-white hover:bg-highlight-blue hover:scale-105 transition-all cursor-pointer shadow-lg shadow-navy-deep/15"
+            >
+              Explore All Services
+              <ArrowRight className="w-4 h-4" />
+            </button>
+          </div>
         </div>
       </section>
 
-
-
-      {/* Web Hosting Banner */}
-      <section className="mx-auto max-w-7xl px-6 pb-24">
-        <a
-          href="https://www.nexstar.host"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block w-full overflow-hidden rounded-3xl shadow-xl hover:shadow-2xl hover:scale-[1.01] transition-all duration-300 cursor-pointer"
-        >
-          <img
-            src={hostImg}
-            alt="Nexstar Managed Web Hosting Banner"
-            className="w-full h-auto object-cover"
-          />
-        </a>
-      </section>
+    
 
       {/* Clients Marquee Section */}
       <section className="py-12 bg-white border-t border-gray-100 overflow-hidden select-none">

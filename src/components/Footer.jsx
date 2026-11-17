@@ -1,8 +1,14 @@
 import nexLogo from '../assets/nex.webp';
+import { coreServices } from '../data/servicesData';
 
 export default function Footer({ setCurrentPage }) {
   const handleNavClick = (page) => {
     setCurrentPage(page);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleServiceClick = (serviceId) => {
+    setCurrentPage({ name: 'service-detail', id: serviceId });
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -76,15 +82,29 @@ export default function Footer({ setCurrentPage }) {
             </ul>
           </div>
 
-          {/* Column 3: Corporate Services */}
+          {/* Column 3: Corporate Services (Top 5 + Explore More) */}
           <div className="flex flex-col gap-4">
             <h3 className="font-heading text-sm font-bold text-white uppercase tracking-wider">Services</h3>
             <ul className="flex flex-col gap-2.5 text-xs font-semibold text-white/60">
-              <li><button onClick={() => handleNavClick({ name: 'service-detail', id: 'web-development' })} className="hover:text-white transition-colors cursor-pointer">Web Application Development</button></li>
-              <li><button onClick={() => handleNavClick({ name: 'service-detail', id: 'mobile-app' })} className="hover:text-white transition-colors cursor-pointer">Mobile App Engineering</button></li>
-              <li><button onClick={() => handleNavClick({ name: 'service-detail', id: 'seo' })} className="hover:text-white transition-colors cursor-pointer">Search Engine Optimization</button></li>
-              <li><button onClick={() => handleNavClick({ name: 'service-detail', id: 'ai' })} className="hover:text-white transition-colors cursor-pointer">AI Automation Integration</button></li>
-              <li><button onClick={() => handleNavClick('services')} className="text-highlight-blue hover:underline cursor-pointer">Browse All 8 Services</button></li>
+              {coreServices.slice(0, 5).map((service) => (
+                <li key={service.id}>
+                  <button
+                    onClick={() => handleServiceClick(service.id)}
+                    className="hover:text-white transition-colors cursor-pointer text-left truncate max-w-full"
+                    title={service.title}
+                  >
+                    {service.title}
+                  </button>
+                </li>
+              ))}
+              <li className="pt-1">
+                <button
+                  onClick={() => handleNavClick('services')}
+                  className="text-highlight-blue hover:text-white transition-colors font-bold cursor-pointer inline-flex items-center gap-1"
+                >
+                  Explore More Services →
+                </button>
+              </li>
             </ul>
           </div>
 
@@ -95,6 +115,7 @@ export default function Footer({ setCurrentPage }) {
               <li><button onClick={() => handleNavClick('seo-pricing')} className="hover:text-white transition-colors cursor-pointer">SEO/GEO Campaign Tiers</button></li>
               <li><button onClick={() => handleNavClick('smo-pricing')} className="hover:text-white transition-colors cursor-pointer">SMO Package Matrix</button></li>
               <li><button onClick={() => handleNavClick('ppc-pricing')} className="hover:text-white transition-colors cursor-pointer">PPC/Paid Campaign Fees</button></li>
+              <li><button onClick={() => handleNavClick('services')} className="text-highlight-blue hover:underline cursor-pointer">All Practice Areas</button></li>
             </ul>
           </div>
 
@@ -102,7 +123,7 @@ export default function Footer({ setCurrentPage }) {
 
         {/* Bottom Banner */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-8 text-xs font-semibold text-white/40">
-          <p className="text-white">©️ 2019 Nexstar Media. All rights reserved.</p>
+          <p className="text-white">© {currentYear} Nexstar Media. All rights reserved.</p>
           <p>The Flagship Company of Nexstar Live Technologies LLC, United States.</p>
         </div>
 

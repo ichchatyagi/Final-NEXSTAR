@@ -39,9 +39,9 @@ export default function App() {
       case 'portfolio':
         return <Portfolio setCurrentPage={setCurrentPage} />;
       case 'services':
-        return <Services setCurrentPage={setCurrentPage} />;
+        return <Services setCurrentPage={setCurrentPage} currentPage={currentPage} />;
       case 'service-detail':
-        return <ServiceDetail currentPage={currentPage} setCurrentPage={setCurrentPage} />;
+        return <ServiceDetail setCurrentPage={setCurrentPage} currentPage={currentPage} />;
       case 'seo-pricing':
         return <SEOPricing setCurrentPage={setCurrentPage} />;
       case 'smo-pricing':

@@ -1,4 +1,4 @@
-import { Cpu, Sparkles, Trophy } from 'lucide-react';
+import { Trophy } from 'lucide-react';
 import atulImg from '../assets/atul.jpeg';
 import mubbasherImg from '../assets/Mubbasher Yasin.png';
 import robertsonImg from '../assets/Robertson .png';

@@ -96,14 +96,6 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="flex gap-3.5 items-start border-t border-gray-100 pt-4">
-                <MapPin className="w-5 h-5 text-accent-red shrink-0 mt-0.5" />
-                <div>
-                  <h4 className="font-heading text-xs font-bold text-navy-deep uppercase tracking-wider">United Kingdom</h4>
-                  <p className="text-text-secondary text-xs font-semibold mt-1">1st Floor, 239 Kensington High St, London W8 6SN, United Kingdom</p>
-                </div>
-              </div>
-
               <div className="flex gap-3.5 items-start">
                 <Phone className="w-5 h-5 text-accent-red shrink-0 mt-0.5" />
                 <div>
@@ -121,6 +113,27 @@ export default function Contact() {
               </div>
             </div>
 
+            {/* UK Coordinate */}
+            <div className="bg-white border border-gray-200/60 p-6 rounded-2xl shadow-sm flex flex-col gap-4">
+              <span className="text-xs font-extrabold uppercase tracking-widest text-highlight-blue">London Corporate Office</span>
+
+              <div className="flex gap-3.5 items-start">
+                <MapPin className="w-5 h-5 text-accent-red shrink-0 mt-0.5" />
+                <div>
+                  <h4 className="font-heading text-xs font-bold text-navy-deep uppercase tracking-wider">United Kingdom</h4>
+                  <p className="text-text-secondary text-xs font-semibold mt-1">1st Floor, 239 Kensington High St, London W8 6SN, United Kingdom</p>
+                </div>
+              </div>
+
+              <div className="flex gap-3.5 items-start">
+                <Phone className="w-5 h-5 text-accent-red shrink-0 mt-0.5" />
+                <div>
+                  <h4 className="font-heading text-xs font-bold text-navy-deep uppercase tracking-wider">Phone Inquiries</h4>
+                  <a href="tel:+19176721794" className="text-text-secondary hover:text-navy-deep text-xs font-semibold mt-1 block">+1-917-672-1794</a>
+                </div>
+              </div>
+            </div>
+
             {/* India Coordinate */}
             <div className="bg-white border border-gray-200/60 p-6 rounded-2xl shadow-sm flex flex-col gap-4">
               <span className="text-xs font-extrabold uppercase tracking-widest text-highlight-blue">Corporate Office</span>
@@ -128,7 +141,7 @@ export default function Contact() {
               <div className="flex gap-3.5 items-start">
                 <MapPin className="w-5 h-5 text-accent-red shrink-0 mt-0.5" />
                 <div>
-                  <h4 className="font-heading text-xs font-bold text-navy-deep uppercase tracking-wider">Delhi NCR </h4>
+                  <h4 className="font-heading text-xs font-bold text-navy-deep uppercase tracking-wider">NewDelhi </h4>
                   <p className="text-text-secondary text-xs font-semibold mt-1">Level - 16th & 17th DND Flyway, Plot No.C-001A, Sector 16B, Noida, Uttar Pradesh 201301</p>
                 </div>
               </div>
@@ -150,60 +163,12 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Social Coordinates */}
-            <div className="bg-white border border-gray-200/60 p-6 rounded-2xl shadow-sm flex flex-col gap-4 animate-in fade-in duration-300">
-              <span className="text-xs font-extrabold uppercase tracking-widest text-highlight-blue">Social Coordinates</span>
-              <div className="flex flex-wrap gap-2.5 mt-1">
-                <a
-                  href="https://www.facebook.com/nexstarmediaindia"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 rounded-xl bg-gray-light hover:bg-navy-deep hover:text-white px-3.5 py-2 font-heading text-xs font-bold text-navy-deep transition-all duration-200 shadow-sm cursor-pointer"
-                >
-                  <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                    <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.8c4.56-.93 8-4.96 8-9.8z" />
-                  </svg>
-                  Facebook
-                </a>
-                <a
-                  href="https://www.linkedin.com/company/nexstarmediaindia/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 rounded-xl bg-gray-light hover:bg-navy-deep hover:text-white px-3.5 py-2 font-heading text-xs font-bold text-navy-deep transition-all duration-200 shadow-sm cursor-pointer"
-                >
-                  <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                  </svg>
-                  LinkedIn
-                </a>
-                <a
-                  href="https://www.instagram.com/nexstarmedialive"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 rounded-xl bg-gray-light hover:bg-navy-deep hover:text-white px-3.5 py-2 font-heading text-xs font-bold text-navy-deep transition-all duration-200 shadow-sm cursor-pointer"
-                >
-                  <svg className="w-4 h-4 fill-none stroke-current stroke-2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
-                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-                  </svg>
-                  Instagram
-                </a>
-              </div>
-            </div>
-
           </div>
-
-          <div className="h-px bg-slate-200" />
-          <span className="text-[10px] font-extrabold uppercase tracking-widest text-slate-400">Security Note</span>
-          <p className="text-slate-400 text-xs font-semibold leading-relaxed">
-            All submitted specifications are validated via automated scripts and indexed inside encrypted corporate databases to ensure strict client confidentiality.
-          </p>
 
         </div>
 
         {/* Right Side: Interactive Inquiry Form */}
-        <div className="lg:col-span-7 bg-white border border-gray-200 p-8 sm:p-10 rounded-3xl shadow-xl">
+        <div className="lg:col-span-7 bg-white border border-gray-200 p-8 sm:p-10 rounded-3xl shadow-xl flex flex-col justify-between">
           {submitted ? (
             <div className="py-12 flex flex-col items-center gap-5 text-center animate-in fade-in zoom-in-95 duration-200">
               <div className="w-16 h-16 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600">
@@ -302,6 +267,50 @@ export default function Contact() {
 
             </form>
           )}
+
+          {/* Social Coordinates at Bottom of Form */}
+          <div className="pt-6 mt-6 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-left">
+            <span className="text-xs font-extrabold uppercase tracking-widest text-highlight-blue">
+              Social Coordinates
+            </span>
+            <div className="flex flex-wrap gap-2.5">
+              <a
+                href="https://www.facebook.com/nexstarmediaindia"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 rounded-xl bg-gray-light hover:bg-navy-deep hover:text-white px-3.5 py-2 font-heading text-xs font-bold text-navy-deep transition-all duration-200 shadow-xs cursor-pointer"
+              >
+                <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.8c4.56-.93 8-4.96 8-9.8z" />
+                </svg>
+                Facebook
+              </a>
+              <a
+                href="https://www.linkedin.com/company/nexstarmediaindia/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 rounded-xl bg-gray-light hover:bg-navy-deep hover:text-white px-3.5 py-2 font-heading text-xs font-bold text-navy-deep transition-all duration-200 shadow-xs cursor-pointer"
+              >
+                <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                </svg>
+                LinkedIn
+              </a>
+              <a
+                href="https://www.instagram.com/nexstarmedialive"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 rounded-xl bg-gray-light hover:bg-navy-deep hover:text-white px-3.5 py-2 font-heading text-xs font-bold text-navy-deep transition-all duration-200 shadow-xs cursor-pointer"
+              >
+                <svg className="w-4 h-4 fill-none stroke-current stroke-2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                </svg>
+                Instagram
+              </a>
+            </div>
+          </div>
         </div>
 
       </section>
