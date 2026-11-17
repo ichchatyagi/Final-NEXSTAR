@@ -115,7 +115,7 @@ export default function Contact() {
 
             {/* UK Coordinate */}
             <div className="bg-white border border-gray-200/60 p-6 rounded-2xl shadow-sm flex flex-col gap-4">
-              <span className="text-xs font-extrabold uppercase tracking-widest text-highlight-blue">London Corporate Office</span>
+              <span className="text-xs font-extrabold uppercase tracking-widest text-highlight-blue">London Office</span>
 
               <div className="flex gap-3.5 items-start">
                 <MapPin className="w-5 h-5 text-accent-red shrink-0 mt-0.5" />
