@@ -151,6 +151,7 @@ export default function Contact() {
                 <div>
                   <h4 className="font-heading text-xs font-bold text-navy-deep uppercase tracking-wider">Phone Inquiries</h4>
                   <a href="tel:+919821000921" className="text-text-secondary hover:text-navy-deep text-xs font-semibold mt-1 block">+91 98210 00921</a>
+                  <a href="tel:+911206532525" className="text-text-secondary hover:text-navy-deep text-xs font-semibold mt-1 block">+91-120-6532525</a>
                 </div>
               </div>
 

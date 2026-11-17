@@ -26,6 +26,7 @@ export default function InteractiveMap() {
       coordinateLabel: 'India Coordinate',
       address: 'Level - 16th & 17th DND Flyway, Plot No.C-001A, Sector 16B, Noida, Uttar Pradesh 201301',
       phone: '+91 98210 00921',
+      secondaryPhone: '+91-120-6532525',
       email: 'contact@nexstarmedia.in',
       x: 1432,
       y: 326,
@@ -241,11 +242,18 @@ export default function InteractiveMap() {
                 </div>
                 
                 {selectedOffice.phone && (
-                  <div className="flex gap-2.5 items-center">
-                    <Phone className="w-4 h-4 text-accent-red shrink-0" />
-                    <a href={`tel:${selectedOffice.phone.replace(/\s+/g, '')}`} className="text-navy-deep hover:text-highlight-blue transition-colors">
-                      {selectedOffice.phone}
-                    </a>
+                  <div className="flex gap-2.5 items-start">
+                    <Phone className="w-4 h-4 text-accent-red shrink-0 mt-0.5" />
+                    <div className="flex flex-col">
+                      <a href={`tel:${selectedOffice.phone.replace(/[\s-]/g, '')}`} className="text-navy-deep hover:text-highlight-blue transition-colors">
+                        {selectedOffice.phone}
+                      </a>
+                      {selectedOffice.secondaryPhone && (
+                        <a href={`tel:${selectedOffice.secondaryPhone.replace(/[\s-]/g, '')}`} className="text-navy-deep hover:text-highlight-blue transition-colors mt-0.5">
+                          {selectedOffice.secondaryPhone}
+                        </a>
+                      )}
+                    </div>
                   </div>
                 )}
 
