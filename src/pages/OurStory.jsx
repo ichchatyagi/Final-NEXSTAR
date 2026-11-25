@@ -1,4 +1,4 @@
-import nexLogo from '../assets/nex.webp';
+import nexLogo from '../assets/logo2.png';
 import whyChooseUsImg from '../assets/why_choose_us.png';
 import { Compass, Target, Eye, Star, CheckCircle2 } from 'lucide-react';
 

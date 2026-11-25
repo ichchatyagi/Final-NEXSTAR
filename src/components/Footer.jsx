@@ -1,4 +1,4 @@
-import nexLogo from '../assets/nex.webp';
+import nexLogo from '../assets/logo1.png';
 import { coreServices } from '../data/servicesData';
 
 export default function Footer({ setCurrentPage }) {
@@ -22,18 +22,18 @@ export default function Footer({ setCurrentPage }) {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 lg:gap-6 pb-12 border-b border-white/10">
 
           {/* Logo and Brand tagline */}
-          <div className="col-span-1 sm:col-span-2 flex flex-col gap-2">
+          <div className="col-span-1 sm:col-span-2 flex flex-col gap-3">
             <div
               onClick={() => handleNavClick('home')}
-              className="flex items-center cursor-pointer group w-fit -mt-7 mb-2"
+              className="flex items-center cursor-pointer group w-fit mb-1"
             >
               <img
                 src={nexLogo}
                 alt="NEXSTAR Logo"
-                className="h-28 w-auto transition-all duration-300 group-hover:scale-105"
+                className="h-14 w-auto transition-all duration-300 group-hover:scale-105"
               />
             </div>
-            <p className="text-white/70 text-sm max-w-sm leading-relaxed -mt-4">
+            <p className="text-white/70 text-sm max-w-sm leading-relaxed">
               Nexstar is a premium global corporate agency engineering bespoke digital infrastructure, AI automations, and performance-led brand designs.
             </p>
 
@@ -123,7 +123,7 @@ export default function Footer({ setCurrentPage }) {
 
         {/* Bottom Banner */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-8 text-xs font-semibold text-white/40">
-          <p className="text-white">© {currentYear} Nexstar Media. All rights reserved.</p>
+          <p className="text-white">© {currentYear} Nexstar. All rights reserved.</p>
           <p>The Flagship Company of Nexstar Live Technologies LLC, United States.</p>
         </div>
 

@@ -17,7 +17,7 @@ import {
   Workflow,
   Layers
 } from 'lucide-react';
-import nexLogo from '../assets/nex.webp';
+import nexLogo from '../assets/logo2.png';
 import { coreServices } from '../data/servicesData';
 
 const serviceIcons = {
@@ -161,7 +161,7 @@ export default function Navbar({ currentPage, setCurrentPage }) {
           <img
             src={nexLogo}
             alt="NEXSTAR Logo"
-            className="h-32 w-auto transition-transform duration-300 group-hover:scale-105"
+            className="h-10 w-auto transition-transform duration-300 group-hover:scale-105"
           />
         </div>
 
